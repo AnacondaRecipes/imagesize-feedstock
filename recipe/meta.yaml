@@ -17,18 +17,26 @@ requirements:
   host:
     - python
     - pip
+    - setuptools
+    - wheel
   run:
-    - python
+    - python >=3.4
 
 test:
   imports:
     - imagesize
+  requires:
+    - pip
+    - python <3.10
+  commands:
+    - pip check
 
 about:
   home: https://github.com/shibukawa/imagesize_py
   license: MIT
+  license_family: MIT
   license_file: LICENSE.rst
-  summary: 'Getting image size from png/jpeg/jpeg2000/gif file'
+  summary: Getting image size from png/jpeg/jpeg2000/gif file
   description: |
     This module analyzes jpeg/jpeg2000/png/gif image header and
     return image size.
