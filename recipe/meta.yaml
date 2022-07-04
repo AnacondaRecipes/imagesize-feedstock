@@ -30,7 +30,7 @@ test:
   commands:
     - pip check
   downstreams:
-    - sphinx
+    - sphinx  # [not py==310]
 
 about:
   home: https://github.com/shibukawa/imagesize_py
