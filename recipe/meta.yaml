@@ -29,6 +29,8 @@ test:
     - pip
   commands:
     - pip check
+  downstreams:
+    - sphinx
 
 about:
   home: https://github.com/shibukawa/imagesize_py
