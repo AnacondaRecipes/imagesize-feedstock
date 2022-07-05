@@ -11,6 +11,7 @@ source:
 
 build:
   number: 0
+  skip: True  # [py<34]
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
@@ -29,8 +30,6 @@ test:
     - pip
   commands:
     - pip check
-  downstreams:
-    - sphinx  # [not py==310]
 
 about:
   home: https://github.com/shibukawa/imagesize_py
